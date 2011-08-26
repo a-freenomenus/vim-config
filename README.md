@@ -26,10 +26,10 @@ Node  => ```npm install -g coffee-script cucumber less```
 ### Building Command-T's native extension
 Command-T has a native component that must be built prior to launching Vim. This can be done as follows:
 
-  cd ~/.vim/bundle/file-command-t/ruby/command-t
-  ruby extconf.rb
-  make clean
-  make
+    cd ~/.vim/bundle/file-command-t/ruby/command-t
+    ruby extconf.rb
+    make clean
+    make
 
 ## Todo:
 * Missing jsl => javascript lint (linux)
