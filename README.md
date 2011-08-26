@@ -14,11 +14,13 @@ You can check what features your version of Vim supports by typing the following
 ## System Requirements
 Asides from the above, you also require software in order to build native extensions, such as Xcode, Ruby DevKit, build-essentials, etc, as well as support for syntax checking and other plugins.
 
+Mac   => ```brew install node csstidy lua jslint && curl http://npmjs.org/install.sh | sh```
+
 Linux => ```apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck```
 
-Ruby  => ```gem install compass sass haml livereload compass-susy-plugin oily_png rb-inotify serve```
+Ruby  => ```gem install compass sass haml livereload compass-susy-plugin oily_png rb-inotify serve bundler```
 
-Node  => ```npm install -g coffee-script cucumber```
+Node  => ```npm install -g coffee-script cucumber less```
 
 
 ### Building Command-T's native extension
@@ -31,9 +33,10 @@ make
 ```
 
 ## Todo:
-* Missing jsl => javascript lint
-* Missing csslint => css lint
-* Missing coffee => coffeescript syntax
-* 
+* Missing jsl => javascript lint (linux)
+* Missing csslint => css lint (linux)
+* Missing node install (linux)
+* Missing pyflakes (mac)
+* SnipMate with Auto OmniComplete
 
 
