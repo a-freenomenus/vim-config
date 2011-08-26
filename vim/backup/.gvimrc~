@@ -1,0 +1,21 @@
+" guifont
+if has("mac")
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h11
+elseif has("win32")
+  set guifont=Consolas:h10
+endif
+  
+" colorscheme
+colorscheme xoria256
+
+" open nerdtree whenever a buffer opens
+au VimEnter * NERDTree
+
+" indent hotkey
+if has("mac")
+  vmap <D-]> >gv
+  vmap <D-[> <gv
+else
+  vmap <C-]> >gv
+  vmap <C-[> <gv
+endif

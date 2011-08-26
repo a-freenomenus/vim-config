@@ -1,0 +1,22 @@
+== Requires ==
+
+Vim 7.3 +ruby +signs
+:echo has('ruby') or ('signs') must output 1
+
+build-essential/xcode/rubydevkit
+
+	cd ~/.vim/bundle/file-command-t/ruby/command-t
+	ruby extconf.rb
+	make clean
+	make
+
+
+	apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck 
+	gem install compass sass haml livereload compass-susy-plugin oily_png rb-inotify serve
+	npm install -g coffee-script cucumber
+
+
+missing jsl => javascript lint
+missing csslint => css lint
+
+
