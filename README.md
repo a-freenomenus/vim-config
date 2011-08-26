@@ -18,7 +18,7 @@ Mac   => ```brew install node csstidy lua jslint && curl http://npmjs.org/instal
 
 Linux => ```apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck```
 
-Ruby  => ```gem install compass sass haml livereload compass-susy-plugin oily_png rb-inotify serve bundler```
+Ruby  => ```gem install coffee-script sass haml```
 
 Node  => ```npm install -g coffee-script cucumber less```
 
