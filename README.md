@@ -31,7 +31,9 @@ make
 ```
 
 ## Todo:
-Missing jsl => javascript lint
-Missing csslint => css lint
+* Missing jsl => javascript lint
+* Missing csslint => css lint
+* Missing coffee => coffeescript syntax
+* 
 
 

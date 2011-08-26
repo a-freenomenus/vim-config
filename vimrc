@@ -1,8 +1,11 @@
+" set encoding
+set encoding=utf-8
+
 " infect
 call pathogen#infect()
 
 " editor
-set nocompatible 
+set nocompatible
 set ruler
 set number				
 set title
@@ -34,7 +37,7 @@ set softtabstop=2
 set expandtab
 set autoindent
 set copyindent
-set list listchars=tab:\ \ ,trail:ˇ
+set list listchars=tab:\ \ ,trail:·
 
 " search
 set hlsearch
