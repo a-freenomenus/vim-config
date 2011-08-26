@@ -12,7 +12,7 @@ You can check what features your version of Vim supports by typing the following
 ```:echo has('property') must output 1```
 
 ## System Requirements
-Asides from the above, you also require software in order to build native extensions, such as Xcode, Ruby DevKit, build-essentials, etc.
+Asides from the above, you also require software in order to build native extensions, such as Xcode, Ruby DevKit, build-essentials, etc, as well as support for syntax checking and other plugins.
 
 Linux => ```apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck```
 
