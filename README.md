@@ -36,6 +36,8 @@ Command-T has a native component that must be built prior to launching Vim. This
 * Missing csslint => css lint (linux)
 * Missing node install (linux)
 * Missing pyflakes (mac)
-* SnipMate with Auto OmniComplete
+* SnipMate with AutoOmniComplete
+* Fix duplicate NERDCommenter
+* Fix absent symlinked Command-T
 
 
