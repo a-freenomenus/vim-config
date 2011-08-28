@@ -37,13 +37,19 @@ snippet pie6
 	.ie8 &
 		+pie
 # Box Shadow
-snippet box-shadow
+snippet bs
 		+box-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px ${8:spread} ${9:inset})
 	${10}
 # Text Shadow
-snippet text-shadow
+snippet ts
 	+text-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px)
 	${8}
+# Border Radius
+snippet br
+	+border-radius(${1}px)
+# Border Radius all
+snippet bra
+	+border-radius(${1:bottom-left}px ${2:bottom-right}px ${3:top-left}px ${4:top-right}px)
 # Extend
 snippet @e
 	@extend .${1:class}

@@ -167,7 +167,12 @@ if has("gui_running")
   set novb
 
   " colorscheme
-  colorscheme xoria256
+  colorscheme tomorrow
+
+  " improved mac sessions
+  if has("mac")
+    au BufRead *.vis so %
+  endif
 
   " gui font
   if has("mac")
