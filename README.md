@@ -14,26 +14,29 @@ You can check what features your version of Vim supports by typing the following
 ## System Requirements
 Asides from the above, you also require software in order to build native extensions, such as Xcode, Ruby DevKit, build-essentials, etc, as well as support for syntax checking and other plugins.
 
+Mac   => ```brew install node csstidy lua jslint && curl http://npmjs.org/install.sh | sh```
+
 Linux => ```apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck```
 
-Ruby  => ```gem install compass sass haml livereload compass-susy-plugin oily_png rb-inotify serve```
+Ruby  => ```gem install coffee-script sass haml```
 
-Node  => ```npm install -g coffee-script cucumber```
+Node  => ```npm install -g coffee-script cucumber less lint csslint```
 
 
 ### Building Command-T's native extension
 Command-T has a native component that must be built prior to launching Vim. This can be done as follows:
-```
-cd ~/.vim/bundle/file-command-t/ruby/command-t
-ruby extconf.rb
-make clean
-make
-```
+
+    cd ~/.vim/bundle/editor-command-t/ruby/command-t/
+    ruby extconf.rb
+    make clean
+    make
+
+### Fixing Syntastic's LESS support
+Syntastic references lessc via the command line, but recent versions are symlinked against /usr/bin/less. To address this, run the following in a Terminal:
+
+    sudo ln -s /usr/bin/less /usr/bin/lessc
 
 ## Todo:
-* Missing jsl => javascript lint
-* Missing csslint => css lint
-* Missing coffee => coffeescript syntax
-* 
-
-
+* Missing pyflakes (mac)
+* SnipMate with AutoOmniComplete
+* Fugitive/git
