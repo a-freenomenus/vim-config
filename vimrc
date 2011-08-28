@@ -147,6 +147,7 @@ runtime! macros/matchit.vim
 
 " zencoding
 let g:user_zen_leader_key = '<leader>z'
+vmap <leader>e <leader>,
 imap <leader>e <leader>z,
 nmap <leader>e <leader>z,
 imap <leader>] <leader>zn
@@ -205,6 +206,7 @@ if has("gui_running")
 
   " zencoding shortcuts
   if has("mac")
+    vmap <D-e> <leader>,
     imap <D-e> <leader>z,
     nmap <D-e> <leader>z,
     imap <D-]> <leader>zn
