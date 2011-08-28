@@ -16,8 +16,8 @@ snippet ife
 	else {
 	  ${3}
 	}
-# tertiary conditional
-snippet tert
+# ternary conditional
+snippet ter
 	${1:/* condition */} ? ${2:a} : ${3:b}
 	${4}
 # switch
@@ -53,49 +53,49 @@ snippet do
 	} while (${1:/* condition */});
 # hover
 snippet hover
-  $("${1}").hover(
-    function() {
-      $(this).${2}(${3});
-      ${
-    },
-    function () {
-      $(this).${4}(${5});
-    }
-  );
+	$("${1}").hover(
+		function() {
+			$(this).${2}(${3});
+			${
+		},
+		function () {
+			$(this).${4}(${5});
+		}
+	);
 # click
 snippet click
-  $("${1}").click(function() {
-    $(this).${2}(${3});
-    ${4}
-  });
+	$("${1}").click(function() {
+		$(this).${2}(${3});
+		${4}
+	});
 # nth-child selectors
 snippet nth
-  $("${1}:nth-child(${2})").addClass("${3}");
-  ${4}
+	$("${1}:nth-child(${2})").addClass("${3}");
+	${4}
 # Modernizr yepnope full load
 snippet modf
-  Modernizr.load([
-    {
-      test: Modernizr.${1:condition} && Modernizr.${2:additional condition},
-      yep: '${3:helper}.js',
-      nope: ['${4:polyfill}.js', '${5:polyfill}.js'],
-      both: '${6:global}.js',
-      complete: function () {
-        ${7:callback function}
-      }
-    },
+	Modernizr.load([
+		{
+			test: Modernizr.${1:boxshadow} && Modernizr.${2:borderradius},
+			yep: '${3:helper}.js',
+			nope: ['${4:polyfill}.js', '${5:polyfill}.js'],
+			both: '${6:global}.js',
+			complete: function () {
+				${7:callback function}
+			}
+		},
 
-    ${8:post-commands}
-  ]);
+		${8:post-commands}
+	]);
 # Modernizr yepnope test
 snippet modt
-  {
-    test: Modernizr.${1:condition} && Modernizr.${2:additional condition},
-    yep: '${3:helper}.js',
-    nope: ['${4:polyfill}.js', '${5:polyfill}.js'],
-    both: '${6:global}.js',
-    complete: function () {
-      ${7:callback function}
-      }
-    }
-  }
+	{
+		test: Modernizr.${1:boxshadow} && Modernizr.${2:borderradius},
+		yep: '${3:helper}.js',
+		nope: ['${4:polyfill}.js', '${5:polyfill}.js'],
+		both: '${6:global}.js',
+		complete: function () {
+			${7:callback function}
+			}
+		}
+	}

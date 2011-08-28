@@ -97,6 +97,9 @@ set noequalalways
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" snipmate autocomplete
+let g:acp_behaviorSnipmateLength=1
+
 " nerdtree
 let NERDTreeIgnore=['.pyc$', '\.rbc$', '\~$']
 nmap <silent> <C-t> :NERDTreeToggle<CR>

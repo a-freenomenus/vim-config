@@ -1,361 +1,370 @@
 # @font-face
 snippet font
-  +font(${1:family},${2:filename})
-  ${3}
+	+font(${1:family},${2:filename})
+	${3}
 # IE Exceptions
 snippet ie
-  .ie7 &
-  .ie8 &
-    ${1}
-  ${2}
+	${2}
+
+	// ie fixes
+	.ie7 &,
+	.ie8 &
+		${1}
 # IE Exceptions, IE6 version
-snippet ie
-  .ie6 &
-  .ie7 &
-  .ie8 &
-    ${1}
-  ${2}
+snippet ie6
+	${2}
+
+	// ie fixes
+	.ie6 &,
+	.ie7 &,
+	.ie8 &
+		${1}
+# CSS3 Pie
+snippet pie
+	${1}
+
+	// invoke pie for css3 on ie7 & ie8
+	.ie7 &,
+	.ie8 &
+		+pie
+# CSS3 Pie, IE6 version
+snippet pie6
+	${1}
+
+	// invoke pie for css3 on ie6, ie7 & ie8
+	.ie6 &,
+	.ie7 &,
+	.ie8 &
+		+pie
 # Box Shadow
-    +box-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px ${8:spread} inset)
-  ${9}
+snippet box-shadow
+		+box-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px ${8:spread} ${9:inset})
+	${10}
 # Text Shadow
 snippet text-shadow
-  +text-shadow(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur})
-  ${8}
+	+text-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px)
+	${8}
 # Extend
 snippet @e
-  @extend .${1:class}
+	@extend .${1:class}
 # Include
 snippet @i
-  @include _${1:partial}
+	@include partials/${1:file}
 # Section comment
-snippet section
-  /***********************
-    ${1:section title}
-    **********************
-  ${2}
+snippet head
+	/***********************
+		${1:Title}
+		**********************
+	${2}
+# Subsection Comment
+snippet sub
+	/**************
+		${1:Subtitle}
+		*************
+	${2}
 # Hand pointer
 snippet hand
-  @extend .hand
-  ${1}
+	@extend .hand
+	${1}
 # Background
 snippet bg
-  background:
-    ${1}: ${2}
-    ${3}
+	background:
+		${1:color}: ${2:white}
+		${3}
 # Background color
 snippet bgc
-  background:
-    color: ${1}
-    ${2}
+	background:
+		color: ${1:white}
+		${2}
 # Background image
 snippet bgi
-  background:
-    image: image-url('${1:filename.png}')
-    repeat: none
-    ${2}
+	background:
+		image: image-url('${1:filename.png}')
+		repeat: none
+		${2}
 # Background image repeat
 snippet bgir
-  background:
-    image: image-url('${1:filename.png}')
-    ${2}
+	background:
+		image: image-url('${1:filename.png}')
+	${2}
 # Background image repeat-x
 snippet bgix
-  background:
-    image: image-url('${1:filename.png}')
-    repeat: repeat-x
-    ${2}
+	background:
+		image: image-url('${1:filename.png}')
+		repeat: repeat-x
+		${2}
 # Background image repeat-y
 snippet bgiy
-  background:
-    image: image-url('${1:filename.png}')
-    repeat: repeat-y
-    ${2}
+	background:
+		image: image-url('${1:filename.png}')
+		repeat: repeat-y
+		${2}
 # Border side
 snippet bt
-  border-top: ${1}px ${2:solid} ${3:color}
-  ${4}
+	border-top: ${1:1}px ${2:solid} ${3:black}
+	${4}
 snippet br
-  border-right ${1}px ${2:solid} ${3:color}
-  ${4}
+	border-right: ${1:1}px ${2:solid} ${3:black}
+	${4}
 snippet bb
-  border-bottom: ${1}px ${2:solid} ${3:color}
-  ${4}
+	border-bottom: ${1:1}px ${2:solid} ${3:black}
+	${4}
 snippet bl
-  border-left: ${1}px ${2:solid} ${3:color}
-  ${4}
+	border-left: ${1:1}px ${2:solid} ${3:black}
+	${4}
 # Border all
 snippet ba
-  border: ${1}px ${2:solid} ${3:color}
-  ${4}
+	border: ${1:1}px ${2:solid} ${3:black}
+	${4}
 # Border none
 snippet bn
-  border: none
-  ${1}
+	border: none
+	${1}
 # Border all nested
 snippet b+
-  border:
-    top: ${1}px ${2:solid} ${3:color}
-    right: ${3}px ${4:solid} ${5:color}
-    bottom: ${6}px ${7:solid} ${8:color}
-    left: ${9}px ${10:solid} ${11:color}
-  ${11}
+	border:
+		top: ${1:1}px ${2:solid} ${3:black}
+		right: ${4:1}px ${5:solid} ${6:black}
+		bottom: ${7:1}px ${8:solid} ${9:black}
+		left: ${10:1}px ${11:solid} ${12:black}
+	${13}
 # Display
 snippet d
-  display: ${1}
-  ${2}
+	display: ${1:none}
+	${2}
 # Display none  
 snippet dn
-  display: none
-  ${1}
+	display: none
+	${1}
 # Display inline
 snippet di
-  display: inline
-  ${1}
+	display: inline
+	${1}
 # Display block
 snippet db
-  display: block
-  ${1}
+	display: block
+	${1}
 # Display inline block
 snippet dib
-  display: inline-block
-  ${2}
-    .ie7 &
-      zoom: 1
-      display: inline
+	display: inline-block
+	${1}
+		
+	// fix ie7 inline-block
+	.ie7 &
+		zoom: 1
+		display: inline
 # Display inline block, IE6 version
 snippet dib6
-  display: inline-block
-  ${2}
-    .ie6 &
-      height ${1:ie6 bug}
-    .ie6 &,
-    .ie7 &
-      zoom: 1
-      display: inline
+	display: inline-block
+	${2}
+		
+	// fix ie6 inline-block
+	.ie6 &
+			height: ${1}px
+
+	// fix ie6 & ie7 inline-block
+	.ie6 &,
+	.ie7 &
+		zoom: 1
+		display: inline
 # Font-Family
 snippet ff
-  font-family: ${1:name}
-  {$2}
+	font-family: ${1:MuseoSans}
+	${2}
 # Nested font properties
 snippet f+
-  font:
-    family: ${1}
-    size: ${2}px
-    style: ${2}
-    weight: ${3}
-  ${4}
+	font:
+		family: ${1:MuseoSans}
+		size: ${2}px
+		weight: ${3:bold}
+	${4}
 # Height
 snippet h
 	height: ${1}px
+	${2}
 # Width
 snippet w
 	height: ${1}px
+	${2}
 # Position
 snippet p
-  position: ${1}
+	position: ${1:relative}
+	${2}
 # Position Relative
-snippet pr
-  position: relative
-  ${1:side}: ${2:value}
-  ${3}
+snippet prl
+	position: relative
+	${1}
 # Position Absolute
-snippet pa
-  position: absolute
-  ${1:side}: ${2:value}
-  ${3}
+snippet pab
+	position: absolute
+	${1}
 # Left Right Top Bototm
 snippet t
-  top: ${1}px
-  ${2}
+	top: ${1}px
+	${2}
 snippet r
 	right: ${1}px
-  ${2}
+	${2}
 snippet b
 	bottom: ${1}px
-  ${2}
+	${2}
 snippet l
 	left: ${1}px
-  ${2}# Margin side
-snippet mt
-  margin-top: ${1}px
-  ${2}
-snippet mr
-  margin-right ${1}px
-  ${2}
-snippet mb
-  margin-bottom: ${1}px
-  ${2}
-snippet ml
-  margin-left: ${1}px
-  ${2}
-# Margin all
-snippet ma
-  ma: ${1}px
-  ${2}
-# Margin none
-snippet mn
-  border: none
-  ${2}
-# Margin all nested
-snippet m+
-  margin:
-    top: ${1}px
-    right: ${2}px
-    bottom: ${3}px
-    left: ${4}px
-  ${5}
+	${2}
 # Line height
 snippet lh
 	line-height: ${1}px
 	${2}
 # List style
 snippet ls
-	list-style: ${1}
-  ${2}
+	list-style: ${1:none}
+	${2}
 # List style none
 snippet lsn
 	list-style: none
 # Margin side
 snippet mt
-  margin-top: ${1}px
-  ${2}
+	margin-top: ${1}px
+	${2}
 snippet mr
-  margin-right ${1}px
-  ${2}
+	margin-right: ${1}px
+	${2}
 snippet mb
-  margin-bottom: ${1}px
-  ${2}
+	margin-bottom: ${1}px
+	${2}
 snippet ml
-  margin-left: ${1}px
-  ${2}
+	margin-left: ${1}px
+	${2}
 # Margin all
 snippet ma
-  margin: ${1}px
-  ${2}
+	margin: ${1}px
+	${2}
 # Margin none
 snippet mn
-  border: none
-  ${2}
+	margin: none
+	${1}
 # Margin all nested
 snippet m+
-  margin:
-    top: ${1}px
-    right: ${2}px
-    bottom: ${3}px
-    left: ${4}px
-  ${5}
+	margin:
+		top: ${1}px
+		right: ${2}px
+		bottom: ${3}px
+		left: ${4}px
+	${5}
 # Padding side
 snippet pt
-  padding-top: ${1}px
-  ${2}
+	padding-top: ${1}px
+	${2}
 snippet pr
-  padding-right ${1}px
-  ${2}
+	padding-right: ${1}px
+	${2}
 snippet pb
-  padding-bottom: ${1}px
-  ${2}
+	padding-bottom: ${1}px
+	${2}
 snippet pl
-  padding-left: ${1}px
-  ${2}
+	padding-left: ${1}px
+	${2}
 # Padding all
 snippet pa
-  ma: ${1}px
-  ${2}
+	padding: ${1}px
+	${2}
 # Padding none
 snippet pn
-  border: none
-  ${2}
+	padding: none
+	${1}
 # Padding all nested
 snippet p+
-  padding:
-    top: ${1}px
-    right: ${2}px
-    bottom: ${3}px
-    left: ${4}px
-  ${5}
+	padding:
+		top: ${1}px
+		right: ${2}px
+		bottom: ${3}px
+		left: ${4}px
+	${5}
 # Max-height
 snippet mah
-	max-height: ${1}
+	max-height: ${1}px
 	${2}
 # Max-width
 snippet maw
-	max-width: ${1}
+	max-width: ${1}px
 	${2}
 # Text transform
 snippet tt
-  text-transform: ${1}
-  ${2}
+	text-transform: ${1:uppercase}
+	${2}
 snippet ttc
 	text-transform: capitalize
-  ${1}
+	${1}
 snippet ttl
 	text-transform: lowercase
-  ${1}
+	${1}
 snippet ttu
 	text-transform: uppercase
-  ${1}
+	${1}
+# Nested Text
+snippet text+
+	text:
+		align: ${1:left}
+		decoration: ${2:none}
+		indent: ${3}px
+		transform: ${4:uppercase}
+	${5}
 # Float
 snippet f
-  float: ${1}
-  ${2}
+	float: ${1:none}
+	${2}
 snippet fl
-  float: left
-  ${1}
+	float: left
+	${1}
 snippet fn
 	float: none
-  ${1}
+	${1}
 snippet fr
-  float: right
-  ${1}
+	float: right
+	${1}
 # Text Align
 snippet ta
-	text-align: ${1}
-  ${2}
+	text-align: ${1:left}
+	${2}
 snippet tac
 	text-align: center
-  ${1}
+	${1}
 snippet tal
 	text-align: left
-  ${1}
+	${1}
 snippet tar
 	text-align: right
-  ${1}
+	${1}
 # Text Decoration
 snippet td
-	text-decoration: ${1}
-  ${2}
+	text-decoration: ${1:none}
+	${2}
 snippet tds
 	text-decoration: line-through
-  ${1}
+	${1}
 snippet tdn
 	text-decoration: none
-  ${1}
+	${1}
 snippet tdu
 	text-decoration: underline
-  ${1}
+	${1}
 # Text indent
 snippet ti
 	text-indent: ${1}px
+	${2}
 snippet ti-
 	text-indent: -9999px
-# Nexted Text
-snippet text+
-  text:
-    align: ${1:left/right/center}
-    decoration: ${2:underline}
-    indent: ${3:horizontal}px
-    transform: ${4:uppercase}
+	${1}
 # Visibility
 snippet v
-	visibility: ${1}
+	visibility: ${1:hidden}
 	${2}
 snippet vc
-  visibility: collapse
-  ${1}
+	visibility: collapse
+	${1}
 snippet vh
-  visibility: hidden
-  ${1}
+	visibility: hidden
+	${1}
 snippet vv
-  visibility: visible
-  ${1}
+	visibility: visible
+	${1}
