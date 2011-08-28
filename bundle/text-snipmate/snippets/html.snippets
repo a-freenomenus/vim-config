@@ -1,0 +1,170 @@
+# Some useful Unicode entities
+# Non-Breaking Space
+snippet nbs
+	&nbsp;
+# ←
+snippet left
+	&#x2190;
+# →
+snippet right
+	&#x2192;
+# ↑
+snippet up
+	&#x2191;<link rel="stylesheet" href="stylesheets/screen.css">
+# ↓
+snippet down
+	&#x2193;
+# ↩
+snippet return
+	&#x21A9;
+# ⇤
+snippet backtab
+	&#x21E4;
+# ⇥
+snippet tab
+	&#x21E5;
+# ⇧
+snippet shift
+	&#x21E7;
+# ⌃
+snippet control
+	&#x2303;
+# ⌅
+snippet enter
+	&#x2305;
+# ⌘
+snippet command
+	&#x2318;
+# ⌥
+snippet option
+	&#x2325;
+# ⌦
+snippet delete
+	&#x2326;
+# ⌫
+snippet backspace
+	&#x232B;
+# ⎋
+snippet escape
+	&#x238B;
+# Inline javascript 
+snippet jsin
+	<script type="text/javascript">
+		${1}
+	</script>
+# Javascript link
+snippet js
+	<script src="${1:path}.js"></script>${2}
+# CSS link
+snippet css
+	<link rel="stylesheet" href="{$1}.css">
+# Mailto link
+snippet mailto
+	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
+# IE Conditional <html>
+snippet ieclass
+  <!--[if lt IE 7]> <html class="no-js ie6 legacy" lang="en"> <![endif]-->
+  <!--[if IE 7]>    <html class="no-js ie7 legacy" lang="en"> <![endif]-->
+  <!--[if IE 8]>    <html class="no-js ie8 legacy" lang="en"> <![endif]-->
+  <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+  <!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+# jQuery
+snippet jquery
+  <!-- grab google cdn's jquery, with a protocol relative url; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+# Blockquote
+snippet bquote
+  <blockquote>
+  	<p>${1:quote}</p>
+  	<small>${2:attribution}</small>
+  </blockquote>
+# Table
+snippet table
+  <table> <!-- begin table -->
+  	<thead>
+      <tr>
+        <th>${1:table header c1}</th> 
+        <th>${2:table header c2}</th>
+      </tr>
+  	</thead> <!-- end table header -->
+    <tbody>
+    	<tr>
+    		<td>${3:table content c1}</td>
+    		<td>${4:table content c2}</td>
+    	</tr>
+    </tbody> <!-- end main table content -->
+  </table> <!-- end table -->
+# Class
+snippet cl
+  class="${1}"
+# ID
+snippet id
+  id="${1}"
+# Alert Classes
+snippet error
+  class="alert-message error"
+snippet success
+  class="alert-message success"
+snippet info
+  class="alert-message info"
+snippet warning
+  class="alert-message warning"
+# Block Alert Messages
+snippet block-error
+  <div class="alert-message block-message error">
+    <!-- message -->
+  	<a href="#">x</a>
+  	<p>
+  		<strong>${1:summary}</strong>
+  		${2:explanation}
+  	</p>
+  	<!-- buttons -->
+    <div class="alert-actions">
+    	<a href="#">${2:button}</a>
+    	<a href="#">${3:button}</a>
+    </div>
+  </div>
+snippet block-success
+  <div class="alert-message block-message success">
+    <!-- message -->
+  	<a href="#">x</a>
+  	<p>
+  		<strong>${1}</strong>
+  		${2}
+  	</p>
+  	<!-- buttons -->
+    <div class="alert-actions">
+    	<a href="#">${2}</a>
+    	<a href="#">${3}</a>
+    </div>
+  </div>
+snippet block-info
+  <div class="alert-message block-message info">
+    <!-- message -->
+  	<a href="#">x</a>
+  	<p>
+  		<strong>${1}</strong>
+  		${2}
+  	</p>
+  	<!-- buttons -->
+    <div class="alert-actions">
+    	<a href="#">${2}</a>
+    	<a href="#">${3}</a>
+    </div>
+  </div>
+snippet block-warning
+  <div class="alert-message block-message warning">
+    <!-- message -->
+  	<a href="#">x</a>
+  	<p>
+  		<strong>${1}</strong>
+  		${2}
+  	</p>
+  	<!-- buttons -->
+    <div class="alert-actions">
+    	<a href="#">${2}</a>
+    	<a href="#">${3}</a>
+    </div>
+  </div>
+
