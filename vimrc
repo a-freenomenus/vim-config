@@ -50,12 +50,6 @@ nmap <silent> <leader><leader> :silent :nohlsearch<CR>
 set history=1000
 set undolevels=1000
 
-" omnicomplete
-set ofu=syntaxcomplete#Complete " autocomplete
-set wildmode=list:longest
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,.sass-cache
-set completeopt=longest,menuone
-
 " mouse support
 set mouse=a
 set ttymouse=xterm2
