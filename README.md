@@ -23,6 +23,14 @@ Ruby  => ```gem install coffee-script sass haml```
 Node  => ```npm install -g coffee-script cucumber less lint csslint```
 
 
+### Building Command-T's native extension
+Command-T has a native component that must be built prior to launching Vim. This can be done as follows:
+
+    cd ~/.vim/bundle/editor-command-t/ruby/command-t/
+    ruby extconf.rb
+    make clean
+    make
+
 ### Fixing Syntastic's LESS support
 Syntastic references lessc via the command line, but recent versions are symlinked against /usr/bin/less. To address this, run the following in a Terminal:
 
@@ -30,4 +38,4 @@ Syntastic references lessc via the command line, but recent versions are symlink
 
 ## Todo:
 * Missing pyflakes (mac)
-* Fugitive/git
+* Git

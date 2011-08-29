@@ -98,7 +98,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
 " command t
-nmap <leader>t :CommandTBuffer
+nmap <leader>t :CommandTBuffer<CR>
 
 " snipmate autocomplete
 let g:acp_behaviorSnipmateLength=1
