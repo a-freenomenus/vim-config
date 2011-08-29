@@ -97,6 +97,9 @@ set noequalalways
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" command t
+nmap <leader>t :CommandTBuffer
+
 " snipmate autocomplete
 let g:acp_behaviorSnipmateLength=1
 
@@ -175,10 +178,10 @@ if has("gui_running")
     au BufRead *.vis so %
   
     " native color picker
-    imap <insert>cp :ColorHex
-    nmap <insert>cp :ColorHex
-    imap <insert>cpr :ColorRGB
-    nmap <insert>cpr :ColorRGB
+    imap <leader>cp :ColorHEX<CR>
+    nmap <leader>cp :ColorHEX<CR>
+    imap <leader>cpr :ColorRGB<CR>
+    nmap <leader>cpr :ColorRGB<CR>
 
   endif
 
