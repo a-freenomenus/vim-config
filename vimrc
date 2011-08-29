@@ -169,14 +169,22 @@ if has("gui_running")
   " colorscheme
   colorscheme tomorrow
 
-  " improved mac sessions
+  " improved mac stuff
   if has("mac")
+    " open with alfred
     au BufRead *.vis so %
+  
+    " native color picker
+    imap <insert>cp :ColorHex
+    nmap <insert>cp :ColorHex
+    imap <insert>cpr :ColorRGB
+    nmap <insert>cpr :ColorRGB
+
   endif
 
   " gui font
   if has("mac")
-    set guifont=Bitstream\ Vera\ Sans\ Mono:h11
+    set guifont=Monaco:h11
   elseif has("win32")
     set guifont=Consolas:h10
   else
@@ -187,9 +195,6 @@ if has("gui_running")
   if has("unix")
     set nomousehide
   endif
-
-  " open nerdtree whenever a buffer opens
-  au VimEnter * NERDTree
 
   " indent bind
   if has("mac")
