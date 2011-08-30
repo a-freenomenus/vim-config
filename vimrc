@@ -4,6 +4,9 @@ set encoding=utf-8
 " infect
 call pathogen#infect()
 
+" hide buffers
+set hidden
+
 " editor
 set nocompatible
 set ruler
