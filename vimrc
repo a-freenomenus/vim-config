@@ -98,7 +98,7 @@ set noequalalways
 
 " syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+"let g:syntastic_auto_loc_list=1
 
 " command t
 nmap <leader>t :CommandTBuffer<CR>
@@ -194,7 +194,7 @@ if has("gui_running")
   elseif has("win32")
     set guifont=Consolas:h10
   else
-    set guifont=Inconsolata\ Medium\ 10
+    set guifont=Inconsolata\ 10
   endif
 
   " don't hide the mousepointer
