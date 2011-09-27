@@ -31,10 +31,6 @@ Command-T has a native component that must be built prior to launching Vim. This
     make clean
     make
 
-### Fixing Syntastic's LESS support
-Syntastic references lessc via the command line, but recent versions are symlinked against /usr/bin/less. To address this, run the following in a Terminal:
-
-    sudo ln -s /usr/bin/less /usr/bin/lessc
 
 ## Todo:
 * Missing pyflakes (mac)
