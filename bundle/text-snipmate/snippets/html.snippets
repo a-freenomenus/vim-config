@@ -103,6 +103,8 @@ snippet info
 	class="alert-message info"
 snippet warning
 	class="alert-message warning"
+snippet !
+	<!-- ${1:Comment}  -->
 # Block Alert Messages
 snippet block-error
 	<div class="alert-message block-message error">
@@ -160,3 +162,7 @@ snippet block-warning
 			<a href="#">${4:button}</a>
 		</div>
 	</div>
+snippet ready
+	$(document).ready(function() {
+	  ${1://code}
+	});
