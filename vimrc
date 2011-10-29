@@ -81,6 +81,9 @@ set ft=ruby
 " additional js extensions
 au BufNewFile,BufRead *.json set ft=javascript
 
+" less extension
+au BufNewFile,BufRead *.less set filetype=less
+
 " nfo extension
 function! SetFileEncodings(encodings)
   let b:myfileencodingsbak=&fileencodings
@@ -103,8 +106,10 @@ let g:syntastic_auto_loc_list=2
 " command t
 nmap <leader>t :CommandTBuffer<CR>
 
-" snipmate autocomplete
-let g:acp_behaviorSnipmateLength=1
+" html snippets in php templates
+au BufRead,BufNewFile *.php set ft=php.html
+au BufRead,BufNewFile *.tpl set ft=php.html
+au BufRead,BufNewFile *.phtml set ft=php.html
 
 " nerdtree
 let NERDTreeIgnore=['.pyc$', '\.rbc$', '\~$']
