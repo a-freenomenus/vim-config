@@ -964,6 +964,6 @@ snippet head
 	 * ${3}
 	 * Copyright `strftime("%Y")` ${4:Synx3 Internet Solutions}
 	 *
-	 * Created:				TIMESTAMP
-	 * Last Modified:	TIMESTAMP
+	 * Created:				Fri 18 Nov 2011 05:56:18 PM PST
+	 * Last Modified: Fri 18 Nov 2011 05:56:18 PM PST
 	 */

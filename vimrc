@@ -81,8 +81,13 @@ set ft=ruby
 " additional js extensions
 au BufNewFile,BufRead *.json set ft=javascript
 
-" less extension
-au BufNewFile,BufRead *.less set filetype=less
+" syntax highlighting & css snippets for less
+au BufNewFile,BufRead *.less set ft=less.css
+
+" syntax highlighting & css snippets for scss
+au BufNewFile,BufRead *.scss set ft=scss.css
+
+" Automatically update header in CSS files
 
 " nfo extension
 function! SetFileEncodings(encodings)
