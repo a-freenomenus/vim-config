@@ -103,15 +103,6 @@ snippet jQ
 snippet $
 	$('${1:body}').${2}
 # Header
-snippet head
-	/*
-	 * ${1:Project Name} v${2:1.0}
-	 *
-	 * ${3}
-	 * Copyright `strftime("%Y")` ${4:Synx3 Internet Solutions}
-	 *
-	 * Created:				TIMESTAMP
-	 * Last Modified:	TIMESTAMP
-	 */
+
 
 

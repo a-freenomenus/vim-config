@@ -161,9 +161,6 @@ nmap <leader>j ]e
 " matchit
 runtime! macros/matchit.vim
 
-" prefixr
-vmap <leader>pr :Prefixr<CR>
-
 " zencoding
 let g:user_zen_leader_key = '<leader>z'
 vmap <leader>e <leader>,
