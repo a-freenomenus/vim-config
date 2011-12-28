@@ -24,6 +24,16 @@ autocmd BufLeave * setlocal nocursorcolumn
 autocmd BufEnter * setlocal cursorline
 autocmd BufLeave * setlocal nocursorline
 
+" autocomplete
+set ofu=syntaxcomplete#Complete
+
+" supertab
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" handle sessions
+map <leader>s :mksession! session.vis<CR>
+au BufRead *.vis so %
+
 " swp files
 if has("win32")
   set backupdir=~/vimfiles/backup
@@ -48,6 +58,13 @@ set incsearch
 set ignorecase
 set smartcase
 nmap <silent> <leader><leader> :silent :nohlsearch<CR>
+
+" ack for vim
+if has("mac")
+  let g:ackprg="ack -H --nocolor --nogroup --column"
+elseif has("unix")
+  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+endif
 
 " history
 set history=1000
@@ -86,8 +103,6 @@ au BufNewFile,BufRead *.less set ft=less.css
 
 " syntax highlighting & css snippets for scss
 au BufNewFile,BufRead *.scss set ft=scss.css
-
-" Automatically update header in CSS files
 
 " nfo extension
 function! SetFileEncodings(encodings)
@@ -154,7 +169,7 @@ set pastetoggle=<F2>
 vmap <leader>] >gv
 vmap <leader>[ <gv
 
-"unimpared bubbling
+" unimpared bubbling
 nmap <leader>k [e
 nmap <leader>j ]e
 

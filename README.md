@@ -14,9 +14,9 @@ You can check what features your version of Vim supports by typing the following
 ## System Requirements
 Asides from the above, you also require software in order to build native extensions, such as Xcode, Ruby DevKit, build-essentials, etc, as well as support for syntax checking and other plugins.
 
-Mac   => ```brew install node csstidy lua jslint && curl http://npmjs.org/install.sh | sh```
+Mac   => ```brew install node csstidy lua jslint ack && curl http://npmjs.org/install.sh | sh```
 
-Linux => ```apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck```
+Linux => ```apt-get install php5-cli pyflakes build-essential tidy lua5.1 lacheck ack-grep```
 
 Ruby  => ```gem install coffee-script sass haml```
 
