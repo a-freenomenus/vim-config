@@ -124,7 +124,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 
 " command t
-nmap <leader>t :CommandTBuffer<CR>
+nmap <leader>t :CommandT<CR>
+nmap <leader>b :CommandTBuffer<CR>
 
 " html snippets in php templates
 au BufRead,BufNewFile *.php set ft=php.html
@@ -185,6 +186,16 @@ imap <leader>] <leader>zn
 imap <leader>[ <leader>zN
 nmap <leader>] <leader>zn
 nmap <leader>[ <leader>zN
+
+" close tag with supertab
+imap <leader>ct </<tab>
+
+" narrow region
+nmap <leader>n :NarrowRegion<CR>
+vmap <leader>n :NarrowRegion<CR>
+nmap <leader>np :NRPrepare<CR>
+vmap <leader>np :NRPrepare<CR>
+map <leader>nm :NRMulti<CR>
 
 " nerdcommenter
 vmap <leader>/ <leader>cm
